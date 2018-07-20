@@ -12,9 +12,9 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node
 
-    def insert(self, node_to_insert, data):
+    def insert_after(self, node_to_insert, data):
         if node_to_insert is None:
-            print("The poition dosen't exist")
+            print("The position is missing")
             return
         new_node = Node(data)
         new_node.next = node_to_insert.next
@@ -48,6 +48,17 @@ class LinkedList:
             prev.next = node.next
             node = None
 
+    def reverse(self):
+        prev_node = None
+        current_node = self.head
+        while(current_node is not None):
+            next_node = current_node.next
+            current_node.next = prev_node
+            prev_node = current_node
+            current_node = next_node
+        self.head = prev_node
+
+
     def print_list(self):
         data_print = self.head
         while data_print is not None:
@@ -64,10 +75,14 @@ if __name__ == '__main__':
     e2.next = e3
 
     list.head_insert("Sun")
-    list.insert(e3, "Thu")
+    list.insert_after(e3, "Thu")
     list.append("Fri")
 
     list.remove("Mon")
+
+    list.print_list()
+
+    list.reverse()
 
     list.print_list()
 
