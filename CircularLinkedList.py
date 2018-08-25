@@ -15,7 +15,7 @@ class CircularLinkedList:
 
         if self.head is not None:
             while temp.next != self.head:
-                temp.next = temp
+                temp = temp.next
             temp.next = ptr1
         else:
             ptr1.next = ptr1
@@ -26,7 +26,7 @@ class CircularLinkedList:
         temp = self.head
         if self.head is not None:
             while True:
-                print(temp.data)
+                print(temp.data, end=" ")
                 temp = temp.next
                 if temp == self.head:
                     break
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     cllist.push(2)
     cllist.push(11)
 
-    print("Contents of circular Linked List")
+    print("Contents of circular Linked List:")
     cllist.print_list()
 
 

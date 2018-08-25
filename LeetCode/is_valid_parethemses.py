@@ -11,4 +11,5 @@ def is_valid(s):
             return False
     return stack == []
 
+
 print(is_valid("{{{}}}"))

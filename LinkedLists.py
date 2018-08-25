@@ -3,11 +3,11 @@ class Node:
         self.data = data
         self.next = None
 
-class LinkedList:
+class LinkedLists:
     def __init__(self):
         self.head = None
 
-    def head_insert(self, data):
+    def push(self, data):
         new_node = Node(data)
         new_node.next = self.head
         self.head = new_node
@@ -62,11 +62,11 @@ class LinkedList:
     def print_list(self):
         data_print = self.head
         while data_print is not None:
-            print(data_print.data)
+            print(data_print.data, end=" ")
             data_print = data_print.next
 
 if __name__ == '__main__':
-    list = LinkedList()
+    list = LinkedLists()
     list.head = Node("Mon")
     e2 = Node("Tue")
     e3 = Node("Wed")
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     list.head.next = e2
     e2.next = e3
 
-    list.head_insert("Sun")
+    list.push("Sun")
     list.insert_after(e3, "Thu")
     list.append("Fri")
 

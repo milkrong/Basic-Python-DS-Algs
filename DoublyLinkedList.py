@@ -48,7 +48,7 @@ class DoubleLinkedList(object):
 
     def print_list(self, first_node):
         while first_node is not None:
-            print(first_node.data)
+            print(first_node.data,end=" ")
             last = first_node
             first_node = first_node.next
 
