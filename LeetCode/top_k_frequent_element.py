@@ -6,15 +6,15 @@ def top_k_frequent(nums, k):
     :param k: int
     :return: int
     """
-    dict = {}
+    temp = {}
     for num in nums:
-        if num in dict:
-            dict[num] += 1
+        if num in temp:
+            temp[num] += 1
         else:
-            dict[num] = 1
+            temp[num] = 1
 
     bucket = [[] for _ in range(len(nums) + 1)]
-    for key, val in dict.items():
+    for key, val in temp.items():
         bucket[val].append(key)
 
     ret = []
