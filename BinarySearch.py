@@ -17,4 +17,3 @@ def binary_search(input_list, item):
 if __name__ == '__main__':
     input = [x for x in range(10)]
     print(binary_search(input,4))
-
