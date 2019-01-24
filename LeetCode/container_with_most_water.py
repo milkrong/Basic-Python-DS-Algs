@@ -19,3 +19,4 @@ def max_area(height):
             right -= 1
 
     return max_area
+
