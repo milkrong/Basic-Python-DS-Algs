@@ -21,4 +21,4 @@ def quick_sort_opertion(arr):
     quick_sort(arr, start, end)
     return arr
 
-print(quick_sort_opertion([3,7,8,5,2,1,9,5,4]))
+quick_sort_opertion([3,7,8,5,2,1,9,5,4])
