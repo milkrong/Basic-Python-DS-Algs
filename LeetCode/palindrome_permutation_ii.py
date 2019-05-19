@@ -1,3 +1,5 @@
+import collections
+
 def generate_palindromes(s):
     """
     Given a string s, return all the palindromic permutations (without duplicates) of it.

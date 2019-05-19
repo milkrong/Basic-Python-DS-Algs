@@ -13,7 +13,7 @@ def add_binary(a, b):
         num_a = a[-1 - index] if index < len(a) else '0'
         num_b = b[-1 - index] if index < len(b) else '0'
 
-        val = int(num_a) + int(num_b) + reint(carry)
+        val = int(num_a) + int(num_b) + int(carry)
         result = "%s%s" % (val % 2, result)
 
         carry = '1' if val > 1 else '0'

@@ -35,3 +35,11 @@ class Solution(object):
             for item in temp:
                 heappush(h, item)
         return curr_time
+
+    def least_interval2(self, tasks, n):
+        import collections
+        d = collections.Counter(tasks)
+        values = d.values()
+        most = max(values)
+        value_count = collections.Counter(values)
+        return max((most - 1) * (n + 1) + value_count[most], len(tasks))

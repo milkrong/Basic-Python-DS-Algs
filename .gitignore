@@ -1,0 +1,12 @@
+venv/pyvenv.cfg
+venv/bin/activate
+venv/bin/activate.csh
+venv/bin/activate.fish
+venv/bin/python3.7
+venv/bin/python
+venv/bin/python3
+OAs/.DS_Store
+Niuke/.vscode/launch.json
+.idea/workspace.xml
+.idea/libraries/R_User_Library.xml
+.DS_Store
